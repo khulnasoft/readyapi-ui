@@ -1,6 +1,7 @@
 name: Deploy Scalar examples
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'examples/web/**'

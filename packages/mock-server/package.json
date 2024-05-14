@@ -1,0 +1,57 @@
+{
+  "name": "@scalar/mock-server",
+  "description": "OpenAPI mock server server",
+  "license": "MIT",
+  "author": "Scalar (https://github.com/scalar)",
+  "homepage": "https://github.com/scalar/scalar",
+  "bugs": "https://github.com/scalar/scalar/issues/new/choose",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scalar/scalar.git",
+    "directory": "packages/mock-server"
+  },
+  "keywords": [
+    "scalar",
+    "openapi",
+    "swagger",
+    "cli"
+  ],
+  "version": "0.1.64",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "rm -Rf dist/ && rollup -c",
+    "test": "vitest",
+    "types:check": "tsc --noEmit --skipLibCheck"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js"
+  },
+  "files": [
+    "./dist",
+    "CHANGELOG.md"
+  ],
+  "module": "dist/index.js",
+  "dependencies": {
+    "@hono/node-server": "^1.11.0",
+    "@scalar/oas-utils": "workspace:*",
+    "@scalar/openapi-parser": "^0.3.2",
+    "hono": "^4.2.7"
+  },
+  "devDependencies": {
+    "@scalar/galaxy": "workspace:*",
+    "@types/node": "^20.8.4",
+    "esbuild": "^0.21.1",
+    "rollup": "^4.16.4",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.3",
+    "vite-node": "^1.3.1"
+  }
+}

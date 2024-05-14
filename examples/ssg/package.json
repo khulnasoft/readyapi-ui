@@ -1,0 +1,29 @@
+{
+  "name": "@scalar-examples/ssg",
+  "license": "MIT",
+  "author": "Scalar (https://github.com/scalar)",
+  "homepage": "https://github.com/scalar/scalar",
+  "bugs": "https://github.com/scalar/scalar/issues/new/choose",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "vue-tsc && vite-ssg build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "dependencies": {
+    "@scalar/api-reference": "workspace:*",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.10",
+    "vite-ssg": "^0.23.6",
+    "vue-tsc": "^1.8.19"
+  }
+}
